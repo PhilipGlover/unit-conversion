@@ -7,7 +7,6 @@ use Getopt::Long qw (GetOptions);
 use Cwd;
 use lib cwd();
 use convertModule;
-use Data::Dumper;
 
 my ($type, $from, $to, $value);
 
@@ -36,7 +35,6 @@ EOS
 }
 
 my $unitsHASH = getConversionValues();
-#warn "in script" . Dumper $unitsHASH;
 my %lookup = getLookup($unitsHASH);
 
 die "The '$type' measurement can't be converted, please see https://gist.github.com/jessjenkins/c88c6ff207bc43721e729f9c9011aafa\n" if (!defined $lookup{$type});

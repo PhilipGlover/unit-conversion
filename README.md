@@ -11,4 +11,13 @@ usage example:
 ```
 
 #### Notes
-Conversion values based on https://gist.github.com/jessjenkins/c88c6ff207bc43721e729f9c9011aafa
+- Conversion values based on https://gist.github.com/jessjenkins/c88c6ff207bc43721e729f9c9011aafa
+- Other metrics can be add, but values must be in the format, where units are relative to the smallest unit:
+```
+"name": "dataStorage",
+"units": {
+    "bit": 1,
+    "byte": 8,
+    "kilobyte": 8000
+}
+```
